@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de cidadania</title>
+</head>
+<body>
+    <h1>Bem vindo ao site de teste de cidadania</h1>
+    Digite o sua cidadania <input type="text" name="pais" id="txt">
+    <br>
+    <input type="button" value="Verificar" onclick="cidade()">
+    <div id="res"></div>
+
+    <script>
+        function cidade(){
+            let lugar = document.querySelector('input#txt')
+            let res = document.querySelector('div#res')
+            let pais = String(lugar.value)
+            res.innerHTML = 'Você e do pais ' + pais
+
+            if(lugar.value == 'brasil'){
+                res.innerHTML += '<p>Você e brasileiro</p>'
+            }
+            
+            else{
+                res.innerHTML += '<p>Você e estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
